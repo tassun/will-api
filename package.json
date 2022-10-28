@@ -1,0 +1,43 @@
+{
+  "name": "will-api",
+  "version": "1.0.0",
+  "description": "Web API gateway adapter for moleculer",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project ./",
+    "kn:api": "node dist/test/test.kn.api.js",
+    "kn:serv": "node dist/test/test.kn.serv.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "KnAPI",
+    "KnGateWay",
+    "Gateway",
+    "WebAPI"
+  ],
+  "author": "tassun_oro@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tassun/will-api/issues"
+  },
+  "homepage": "https://github.com/tassun/will-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tassun/will-api.git"
+  },
+  "dependencies": {
+    "config": "^3.3.8",
+    "moleculer": "^0.14.24",
+    "moleculer-web": "^0.10.4",
+    "will-db": "^1.0.6",
+    "will-sql": "^1.0.11"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.5",
+    "mysql": "^2.18.1",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
