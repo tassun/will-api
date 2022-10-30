@@ -52,8 +52,8 @@ export class KnGateWay implements ServiceSchema {
             if(errcode <= 0 || errcode >= 1024) errcode = 406; //not acceptable
             let reply : JSONReply = new JSONReply();
             reply.head.modeling(req.$service?.name, metname);
-            reply.head.composeError(""+errno, err.message);
-            //reply.head.details = err;
+            reply.head.composeError(String(errno), err.message);
+            reply.head.details = err;
             res.setHeader("Content-Type", "application/json; charset=utf-8");
             res.writeHead(Number(errcode));
             res.end(JSON.stringify(reply));

@@ -89,7 +89,7 @@ curl -X POST -H "Origin: https://example.com/" http://localhost:8080/api/test/hi
 
 #### API Response
 
-Response result always in JSON format (`JSONReply`) compose with head and body
+`JSONReply` response as result always compose in format with head and body
 
 ```typescript
 {
