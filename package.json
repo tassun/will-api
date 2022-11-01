@@ -7,7 +7,7 @@
     "build": "tsc --project ./",
     "kn:api": "node dist/test/test.kn.api.js",
     "kn:serv": "node dist/test/test.kn.serv.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node-dev src/test/test.kn.api.ts"
   },
   "keywords": [
     "KnAPI",
@@ -36,6 +36,8 @@
   "devDependencies": {
     "@types/node": "^18.11.5",
     "mysql": "^2.18.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.4"
   },
   "engines": {

@@ -1,7 +1,7 @@
 import { ServiceBroker } from "moleculer";
-import KnAPI from "../api/KnAPI";
 import { APIError } from "../api/APIError";
 import { JSONReply } from "../api/JSONReply";
+import KnAPI from "../api/KnAPI";
 
 const broker = new ServiceBroker({
     logLevel: "debug"

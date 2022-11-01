@@ -1,13 +1,10 @@
 import ApiGatewayService from "moleculer-web";
-import { Service, ServiceSchema, ServiceSettingSchema } from "moleculer";
-import { LoggerInterface, KnLogger } from "will-db";
+import { ServiceSchema, ServiceSettingSchema } from "moleculer";
 import { JSONReply } from "./JSONReply";
 
 export class KnGateWay implements ServiceSchema {
     public name : string = "api";
     
-    public logger: LoggerInterface = new KnLogger(); 
-
     public mixins: Array<Partial<ServiceSchema>> = [ApiGatewayService];
 
     public settings?: ServiceSettingSchema = {
@@ -63,15 +60,6 @@ export class KnGateWay implements ServiceSchema {
     
     constructor(name?: string) {
         if(name) this.name = name;
-    }
-
-    public created() : void {
-        let svc = (this as unknown) as Service;
-        this.logger = svc.logger;
-        let settings = svc?.schema.settings;
-        if(settings) {
-            this.settings = { ...this.settings, ...settings };
-        }
     }
 
 }
