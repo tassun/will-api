@@ -1,6 +1,6 @@
 {
   "name": "will-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Web API gateway adapter for moleculer",
   "main": "index.js",
   "scripts": {

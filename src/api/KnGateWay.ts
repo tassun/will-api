@@ -21,6 +21,7 @@ export class KnGateWay implements ServiceSchema {
             onBeforeCall: (ctx: any, route: any, req: any, res: any, alias: any) => {
                 ctx.meta.userAgent = req.headers["user-agent"];
                 ctx.meta.session = req.session;
+                ctx.meta.headers = req.headers;
                 let logger = req.$service.logger;
                 logger.debug("headers",req.headers);
             },
