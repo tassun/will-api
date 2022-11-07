@@ -30,6 +30,14 @@ const HelloService : ServiceSchema = {
             ans.head.modeling("api","test.reply");
             ans.body = { data: "API Gateway" };
             return ans;
+        },
+        plain(ctx: any) {
+            ctx.meta.$responseType = "text/plain";
+            return "Hello API";
+        },
+        html(ctx: any) {
+            ctx.meta.$responseType = "text/html; charset=utf-8";
+            return "<html><head><title>test</title></head><body>world</body></html>";
         }
     }
 };

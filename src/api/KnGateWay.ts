@@ -25,6 +25,20 @@ export class KnGateWay implements ServiceSchema {
                 logger.debug("headers",req.headers);
             },
             onAfterCall: (ctx: any, route: any, req: any, res: any, data: any) => {
+                let responseType : string | null = null;
+                if (req.$action && req.$action.responseType) {
+                    responseType = req.$action.responseType;
+                }
+                if (ctx.meta.$responseType) {
+                    responseType = ctx.meta.$responseType;
+                }
+                if(responseType) {
+                    responseType = responseType.toLowerCase();
+                    let idx = responseType.indexOf("text/plain");
+                    if(idx>=0) return data;
+                    idx = responseType.indexOf("text/html");
+                    if(idx>=0) return data;
+                }
                 if(data instanceof JSONReply) {
                     return data;
                 } else {

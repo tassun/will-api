@@ -24,3 +24,5 @@ broker.start()
 //curl -v -X POST "http://localhost:8080/api/test/hi" -d name=testing
 //curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/api/test/hi -d "{\"name\":\"testing\"}"
 //curl -v -X POST -H "Origin: https://example.com/" http://localhost:8080/api/test/hi?name=test
+//curl http://localhost:8080/api/test/plain
+//curl http://localhost:8080/api/test/html
