@@ -14,6 +14,7 @@ export class KnGateWay implements ServiceSchema {
         cors: true,
 
         routes: [{ 
+            mappingPolicy: "all",
             bodyParsers: {
                 json: true,
                 urlencoded: { extended: true }

@@ -1,12 +1,13 @@
 {
   "name": "will-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Web API gateway adapter for moleculer",
   "main": "index.js",
   "scripts": {
     "build": "tsc --project ./",
     "kn:api": "node dist/test/test.kn.api.js",
     "kn:serv": "node dist/test/test.kn.serv.js",
+    "kn:web": "ts-node-dev src/test/test.kn.web.ts",
     "test": "ts-node-dev src/test/test.kn.api.ts"
   },
   "keywords": [
